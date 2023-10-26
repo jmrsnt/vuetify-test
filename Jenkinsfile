@@ -1,15 +1,9 @@
 pipeline {
     agent any
-    
     stages {
-        stage('Install Dependencies') {
+        stage('Build and Run') {
             steps {
-                sh 'npm install'
-            }
-        }
-        stage('Build Vuetify') {
-            steps {
-                sh 'npm run build'
+                sh "docker compose up --build -d"
             }
         }
     }
