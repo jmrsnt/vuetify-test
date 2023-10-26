@@ -1,0 +1,10 @@
+version: '3.9'
+name: 'vuetify'
+
+services:
+  webapp:
+    build:
+      context: .
+    image: jmrsnt/vuetify-project
+    ports:
+      - 3001:80
