@@ -7,5 +7,10 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage('Build Vuetify') {
+            steps {
+                sh 'npm run build'
+            }
+        }
     }
 }
